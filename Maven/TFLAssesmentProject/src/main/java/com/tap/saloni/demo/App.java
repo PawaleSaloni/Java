@@ -15,11 +15,6 @@ public class App {
         QuestionBank questionBank = new QuestionBank();
         FileIOManager fileIOManager = new FileIOManager();
 
-        /* Question q = new Question();
-        q.setId(1);
-        int id = q.getId();
-        q.toString(); */
-
         Scanner scanner = new Scanner(System.in); 
 
         // running is a variable - It's used to control a loop
@@ -44,28 +39,38 @@ public class App {
                     questions=questionBank.getAll();
 
                     fileIOManager.saveQuestionsToFile(questions);
+                    System.out.println("Question added and saved to file successfully!");
                     break;
-                case 2:
 
+                case 2:
                     // Remove Question
                     int questionIdToRemove = uiManager.getQuestionIdInput();
                     questionBank.remove(questionIdToRemove);
+                    fileIOManager.saveQuestionsToFile(questionBank.getAll());
+                    System.out.println("Question removed and changes saved to file.");
                     break;
-                case 3:
 
+                case 3:
                     // Update Question
                     int questionIdToUpdate = uiManager.getQuestionIdInput();
                     Question updatedQuestion = uiManager.getQuestionInput();
                     questionBank.update(questionIdToUpdate, updatedQuestion);
+                    fileIOManager.saveQuestionsToFile(questionBank.getAll());
+                    System.out.println("Question updated and saved to file successfully!");
                     break;
+
                 case 4:
                     // View All Questions
                     List<Question> allQuestions = fileIOManager.loadQuestionsFromFile();
                     uiManager.displayQuestions(allQuestions);
+                    System.out.println(" All questions displayed.");
                     break;
+
                 case 5:
                     running = false;
+                    System.out.println("Exiting...");
                     break;
+
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
