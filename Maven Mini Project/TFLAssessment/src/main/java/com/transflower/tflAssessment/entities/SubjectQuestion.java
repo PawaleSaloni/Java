@@ -1,43 +1,84 @@
 package com.transflower.tflAssessment.entities;
 
-public class SubjectQuestion {
+import java.util.Objects;
 
-    private int QuestionId;
-    private String Question;
-    private int SubjectId;
-    private String Subject;
+public class SubjectQuestion implements Cloneable {
+
+    private int questionId;
+    private String question;
+    private int subjectId;
+    private String subject;
 
     // Getters and Setters
-
-    public int getQuestionId(){
-        return QuestionId;
-    }
-    
-    public void setQuestionId(int QuestionId){
-        this.QuestionId = QuestionId;
+    public int getQuestionId() {
+        return questionId;
     }
 
-    public String getQuestion(){
-        return Question;
-    }
-    
-    public void setQuestion(String Question){
-        this.Question = Question;
+    public void setQuestionId(int questionId) {
+        this.questionId = questionId;
     }
 
-    public int getSubjectId(){
-        return SubjectId;
+    public String getQuestion() {
+        return question;
     }
 
-    public void setSubjectId(int SubjectId){
-        this.SubjectId = SubjectId;
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
-    public String getSubject(){
-        return Subject;
+    public int getSubjectId() {
+        return subjectId;
     }
 
-    public void setSubject(String Subject){
-        this.Subject = Subject;
+    public void setSubjectId(int subjectId) {
+        this.subjectId = subjectId;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    @Override
+    public String toString() {
+        return "SubjectQuestion{" +
+               "questionId=" + questionId +
+               ", question='" + question + '\'' +
+               ", subjectId=" + subjectId +
+               ", subject='" + subject + '\'' +
+               '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        SubjectQuestion other = (SubjectQuestion) obj;
+        return questionId == other.questionId &&
+               subjectId == other.subjectId &&
+               Objects.equals(question, other.question) &&
+               Objects.equals(subject, other.subject);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(questionId, question, subjectId, subject);
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        try {
+            System.out.println("Finalize called for " + this);
+        } finally {
+            super.finalize();
+        }
     }
 }
