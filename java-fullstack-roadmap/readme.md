@@ -126,7 +126,7 @@
 - Annotations
 - Configuration
 
-## Spring Boot
+## Spring Boot  
 - Auto configuration
 - application.properties
 - REST Controllers
