@@ -1,7 +1,6 @@
 # 🚀 Java Fullstack Developer Roadmap
 
 > A complete, structured, and detailed roadmap to become a Job-Ready Java Fullstack Developer.
-
 ---
 
 # 🟢 PHASE 1: Core Java (Strong Foundation)
