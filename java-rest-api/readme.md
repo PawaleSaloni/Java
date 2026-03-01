@@ -191,15 +191,32 @@ The following tools are commonly used to test and document REST APIs:
 
 Below is a typical folder structure of a Spring Boot REST API project:
 
+```
 project-name
 │
-├── controller
-├── service
-├── repository
-├── model
-├── application.properties
-└── pom.xml
-
+├── src/main/java/com/example/project
+│   ├── controller
+│   │     └── UserController.java
+│   │
+│   ├── service
+│   │     ├── UserService.java
+│   │     └── UserServiceImpl.java
+│   │
+│   ├── repository
+│   │     └── UserRepository.java
+│   │
+│   ├── model
+│   │     └── User.java
+│   │
+│   └── ProjectApplication.java
+│
+├── src/main/resources
+│   └── application.properties
+│
+├── pom.xml
+│
+└── README.md
+```
 ---
 
 # 📁 Folder Description
@@ -245,4 +262,5 @@ project-name
 # 📌 Conclusion
 
 REST API is a powerful and flexible architecture widely used in modern web applications. Combined with Spring Boot, it enables developers to build scalable, maintainable, and production-ready backend systems efficiently.
+
 
