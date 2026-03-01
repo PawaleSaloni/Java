@@ -95,3 +95,12 @@ Example URLs:
   "name": "Saloni",
   "email": "saloni@gmail.com"
 }
+
+### Response (JSON)
+
+```json
+{
+  "id": 1,
+  "name": "Saloni",
+  "email": "saloni@gmail.com"
+}
