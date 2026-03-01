@@ -86,15 +86,16 @@ Example URLs:
 
 ---
 
-# 🔹 Request & Response Example
+# 🔹 JSON Example
 
-### Request (JSON)
+## Request (JSON)
 
 ```json
 {
   "name": "Saloni",
   "email": "saloni@gmail.com"
 }
+```
 
 ## Response (JSON)
 
@@ -104,7 +105,7 @@ Example URLs:
   "name": "Saloni",
   "email": "saloni@gmail.com"
 }
-
+```
 ---
 
 # 🔹 HTTP Status Codes
@@ -141,6 +142,7 @@ public class UserController {
         return userService.saveUser(user);
     }
 }
+```
 
 ---
 
@@ -243,3 +245,4 @@ project-name
 # 📌 Conclusion
 
 REST API is a powerful and flexible architecture widely used in modern web applications. Combined with Spring Boot, it enables developers to build scalable, maintainable, and production-ready backend systems efficiently.
+
