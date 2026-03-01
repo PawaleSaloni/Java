@@ -1,173 +1,97 @@
-REST API – Complete Guide
-📌 What is REST API?
+# 🌐 REST API – Complete Notes
 
-REST API (Representational State Transfer Application Programming Interface) is a way for systems to communicate over HTTP using standard methods like:
+## 📌 Introduction
 
-GET
+REST API (Representational State Transfer – Application Programming Interface) is a web service architecture that allows communication between client and server using the HTTP protocol.
 
-POST
+REST was introduced by Roy Fielding.
 
-PUT
+REST APIs usually exchange data in **JSON format**.
 
-DELETE
+---
 
-REST is an architectural style introduced by
-👤 Roy Fielding
+# 🏗️ REST Architecture Overview
 
-REST APIs usually exchange data in JSON format.
-
-🏗️ REST Architecture Flow
-Client (Frontend / Mobile App)
-        ↓ HTTP Request
-REST Controller (Backend)
-        ↓
-Service Layer
-        ↓
-Repository Layer
-        ↓
-Database
-        ↓
+Client (Web / Mobile App)  
+↓  
+HTTP Request (GET, POST, PUT, DELETE)  
+↓  
+REST Controller  
+↓  
+Service Layer  
+↓  
+Repository Layer  
+↓  
+Database  
+↓  
 HTTP Response (JSON)
-🔹 HTTP Methods (CRUD Operations)
-Method	Operation	Description
-GET	Read	Fetch data
-POST	Create	Insert new data
-PUT	Update	Modify existing data
-DELETE	Delete	Remove data
-🔹 Example REST Endpoints
-GET     /users
-GET     /users/1
-POST    /users
-PUT     /users/1
-DELETE  /users/1
-🔹 Sample REST API (Spring Boot)
 
-Built using Spring Boot
+---
 
-@RestController
-@RequestMapping("/users")
-public class UserController {
+# 🔹 HTTP Methods (CRUD Operations)
 
-    @GetMapping
-    public List<User> getAllUsers() {
-        return userService.getUsers();
-    }
+| Method  | Operation | Description |
+|----------|------------|-------------|
+| GET      | READ       | Retrieve data |
+| POST     | CREATE     | Add new data |
+| PUT      | UPDATE     | Modify existing data |
+| DELETE   | DELETE     | Remove data |
 
-    @PostMapping
-    public User createUser(@RequestBody User user) {
-        return userService.saveUser(user);
-    }
-}
-🔹 REST Principles (Very Important)
-1️⃣ Stateless
+---
 
-Server does NOT store client session.
+## 🔹 Example REST Endpoints
 
-Every request must contain complete information.
+GET     /users  
+GET     /users/{id}  
+POST    /users  
+PUT     /users/{id}  
+DELETE  /users/{id}  
 
-2️⃣ Client-Server Architecture
+---
 
-Frontend and backend are independent.
+# 🔹 What is a Resource?
 
-3️⃣ Cacheable
+A resource represents data in the system.
 
-Responses can be cached.
+Examples:
+- User
+- Product
+- Order
+- Student
 
-4️⃣ Uniform Interface
+Example URLs:
 
-Standard HTTP methods must be used.
+/users        → All users  
+/users/5      → User with ID 5  
 
-5️⃣ Layered System
+---
 
-Security, load balancer, API gateway can exist between client and server.
+# 🔹 REST Principles (Important for Interview)
 
-🔹 What is a Resource?
+### 1️⃣ Stateless
+- Server does not store client session.
+- Each request must contain complete information.
 
-A resource is any data object:
+### 2️⃣ Client-Server Architecture
+- Frontend and backend are separate systems.
 
-User
+### 3️⃣ Cacheable
+- Responses can be cached for performance.
 
-Product
+### 4️⃣ Uniform Interface
+- Standard HTTP methods must be used.
 
-Student
+### 5️⃣ Layered System
+- System may include security layers, API gateways, load balancers.
 
-Order
+---
 
-Example:
+# 🔹 Request & Response Example
 
-/users        → collection
-/users/10     → single resource
-🔹 Request & Response Format
-Request Body (JSON)
+### Request (JSON)
+
+```json
 {
   "name": "Saloni",
   "email": "saloni@gmail.com"
 }
-Response Body (JSON)
-{
-  "id": 1,
-  "name": "Saloni",
-  "email": "saloni@gmail.com"
-}
-🔹 HTTP Status Codes
-Code	Meaning
-200	OK
-201	Created
-400	Bad Request
-401	Unauthorized
-404	Not Found
-500	Internal Server Error
-🔹 REST vs SOAP
-Feature	REST	SOAP
-Data Format	JSON	XML
-Performance	Fast	Slower
-Complexity	Simple	Complex
-Popularity	Very High	Low
-🔹 Tools for Testing REST API
-
-Postman
-
-Swagger
-
-cURL
-
-🔹 Project Structure (Spring Boot REST API)
-project-name
-│
-├── controller
-│     └── UserController.java
-│
-├── service
-│     └── UserService.java
-│
-├── repository
-│     └── UserRepository.java
-│
-├── model
-│     └── User.java
-│
-├── application.properties
-└── pom.xml
-🔹 Advantages of REST API
-
-Platform Independent
-
-Lightweight
-
-Scalable
-
-Easy to integrate
-
-Widely used in modern web & mobile apps
-
-🔹 Real-World Usage
-
-Modern applications use:
-
-Backend → Spring Boot
-
-Frontend → React / Angular
-
-Database → MySQL / PostgreSQL
-
-API Testing → Postman
