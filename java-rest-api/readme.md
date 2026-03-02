@@ -4,7 +4,7 @@
 
 REST API (Representational State Transfer – Application Programming Interface) is a web service architecture that allows communication between client and server using the HTTP protocol.
 
-REST was introduced by Roy Fielding.
+REST was introduced by Roy Fielding. 
 
 REST APIs usually exchange data in **JSON format**.
 
