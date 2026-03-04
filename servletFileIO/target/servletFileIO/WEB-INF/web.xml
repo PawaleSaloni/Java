@@ -1,0 +1,9 @@
+<servlet>
+    <servlet-name>SubjectServlet</servlet-name>
+    <servlet-class>com.tfl.assessment.controllers.SubjectController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>SubjectServlet</servlet-name>
+    <url-pattern>/subjects</url-pattern>
+</servlet-mapping>

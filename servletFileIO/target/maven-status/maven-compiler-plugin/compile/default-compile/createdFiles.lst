@@ -1,0 +1,4 @@
+com/tfl/assessment/services/SubjectService.class
+com/tfl/assessment/models/Subject.class
+com/tfl/assessment/controllers/SubjectController.class
+com/tfl/assessment/repositories/SubjectRepository.class
