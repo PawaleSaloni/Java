@@ -26,3 +26,4 @@ Servlets · REST API · Docker · MySQL · Maven
 This repo follows a structured path from Java basics
 to production-ready Spring Boot applications.
 ```
+https://github.com/PawaleSaloni/java-springboot-mastery#:~:text=Settings-,java%2Dspringboot%2Dmastery,-Public
