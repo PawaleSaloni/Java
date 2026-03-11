@@ -13,7 +13,6 @@
 6. [SOLID Principles](#6️⃣-solid-principles)
 7. [Design Patterns (OOP in Action)](#7️⃣-design-patterns-oop-in-action)
 8. [OOP in Spring Boot](#8️⃣-oop-in-spring-boot)
-9. [Interview Cheat Sheet](#9️⃣-interview-cheat-sheet)
 
 ---
 
@@ -800,34 +799,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
 | `extends` vs `implements` | `extends` = class/class or interface/interface. `implements` = class/interface |
 | `this` vs `super` | `this` = current class. `super` = parent class |
 | Early vs Late Binding | Overloading = early (compile-time). Overriding = late (runtime) |
-
-### Top Interview Questions
-
-1. **Can we override `static` methods?** → No, they are hidden, not overridden.
-2. **Can a constructor be inherited?** → No, but `super()` calls the parent constructor.
-3. **What is covariant return type?** → Overriding method can return a subtype.
-4. **Can an interface extend multiple interfaces?** → Yes!
-5. **Difference between `final`, `finally`, `finalize`?**
-   - `final` → variable/method/class restriction
-   - `finally` → block always executes after try-catch
-   - `finalize()` → called by GC before object is destroyed
-6. **What is marker interface?** → Empty interface (e.g., `Serializable`, `Cloneable`)
-7. **Can abstract class have a constructor?** → Yes! Called via `super()`.
-8. **What is diamond problem?** → Ambiguity in multiple inheritance — solved in Java via interface `default` method conflict resolution.
-
-```java
-// Diamond problem resolution
-interface A { default void greet() { System.out.println("A"); } }
-interface B extends A { default void greet() { System.out.println("B"); } }
-interface C extends A { default void greet() { System.out.println("C"); } }
-
-class D implements B, C {
-    @Override
-    public void greet() {
-        B.super.greet();  // Explicitly choose B's implementation
-    }
-}
-```
 
 ---
 
