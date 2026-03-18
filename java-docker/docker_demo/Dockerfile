@@ -1,5 +1,6 @@
 # Use lightweight Java 24 runtime (LTS)
 FROM eclipse-temurin:21-jdk
+
 # Create working directory inside container
 WORKDIR /app
 
